@@ -1,8 +1,15 @@
 input.onButtonPressed(Button.A, function () {
     lauf = 1
+    basic.showLeds(`
+        . . # . .
+        . # . . .
+        # . . . .
+        . # . . .
+        . . # . .
+        `)
     DLPLmatrix.schreibeText(
     nrMatrix.zentral,
-    "1+3=4",
+    "" + randint(2, 10) + "+" + randint(2, 10) + "=" + "?",
     0x00ff00,
     false
     )
@@ -37,11 +44,18 @@ radio.onReceivedString(function (receivedString) {
 })
 input.onButtonPressed(Button.B, function () {
     lauf = 1
+    basic.showLeds(`
+        . . # . .
+        . . . # .
+        . . . . #
+        . . . # .
+        . . # . .
+        `)
     DLPLmatrix.schreibeText(
     nrMatrix.links,
-    "Bachinger",
+    "DLPL-Neopixel",
     0xff0000,
-    false
+    true
     )
 })
 let lauf = 0
