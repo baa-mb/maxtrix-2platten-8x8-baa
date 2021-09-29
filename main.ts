@@ -60,20 +60,19 @@ input.onButtonPressed(Button.B, function () {
 })
 let lauf = 0
 basic.showString("DLPL")
-lauf = 0
+lauf = 1
 basic.showIcon(IconNames.Diamond)
 radio.setGroup(54)
 DLPLmatrix.definitionMatrix(nrMatrix.zentral, HWMatrix.m2, 0)
 DLPLmatrix.definitionMatrix(nrMatrix.links, HWMatrix.m2, 1)
 basic.forever(function () {
-    if (lauf == 2) {
-        DLPLmatrix.definitionMatrix(nrMatrix.links, HWMatrix.m2, 2)
+    if (lauf == 0) {
         DLPLmatrix.schreibeText(
         nrMatrix.links,
         "Herzlich willkommen in DLPL.",
         0x0000ff,
         true
         )
-        basic.pause(3000)
+        basic.pause(5000)
     }
 })
